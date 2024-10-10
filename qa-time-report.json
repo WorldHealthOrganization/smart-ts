@@ -1,0 +1,113 @@
+{
+  "date" : "Fri, 04 Oct, 2024 14:13:33 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/fsh-generated/resources/ImplementationGuide-smart.who.int.ts.json",
+      "size" : 2040,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 46
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 47,
+          "length" : 7
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 47,
+          "length" : 119
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 1567
+        },
+        {
+          "activity" : "generate1",
+          "start" : 49,
+          "length" : 73
+        },
+        {
+          "activity" : "generate2",
+          "start" : 51,
+          "length" : 57
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 63,
+          "length" : 3
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 85,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/CodeSystem-ICD11.json",
+      "size" : 21408,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 46,
+          "length" : 44
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 46,
+          "length" : 1
+        },
+        {
+          "activity" : "loadDepInfo",
+          "start" : 46,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 46,
+          "length" : 45
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 47,
+          "length" : 3
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 47,
+          "length" : 57
+        },
+        {
+          "activity" : "validate",
+          "start" : 47,
+          "length" : 657
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 49,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 49,
+          "length" : 104
+        },
+        {
+          "activity" : "generate2",
+          "start" : 51,
+          "length" : 2498
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 63,
+          "length" : 5
+        }
+      ]
+    }
+  ]
+}
