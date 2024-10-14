@@ -15,7 +15,7 @@ For high level information about what approach will be taken for terminology man
 
 ### Start up the DAK dictionary
 
-![1728321522884](image/DAK-Authoring-Guide/1728321522884.png)
+[Visual demonstration for creating a DAK Data Dictionary as an OCL Source](input\pagecontent\image\DAK-Authoring-Guide\1728321522884.png)
 
 1. Fill out required fields for this source, based on the DAK being developed.
 
@@ -54,9 +54,7 @@ OCL's cloning operation can recreate a concept and its mappings, making it easie
 
 Note that the clone operation by default will "cascade", meaning it will recreate both the concept and its mappings if those mappings are of a certain type. This operation can be customized to change how this cascade works.
 
-##### Visual example of searching and cloning
-
-![1728321535808](image/DAK-Authoring-Guide/1728321535808.png)
+[Visual example of searching and cloning](input\pagecontent\image\DAK-Authoring-Guide\1728321535808.png)
 
 ##### Making adaptations to a cloned concept
 
@@ -72,7 +70,7 @@ Adding translations to this concept can also be done using this action by creati
 
 Note that IDs cannot be changed on any concept.
 
-![1728321545824](image/DAK-Authoring-Guide/1728321545824.png)
+[Visual example in OCL for editing a concept](input\pagecontent\image\DAK-Authoring-Guide\1728321545824.png)
 
 ##### Questions and Discussions
 
@@ -96,13 +94,13 @@ Note that IDs cannot be changed on any concept.
 
 Click the "+" icon to "Add Concept". This will open the form to create a concept, which will contain the necessary fields to fill out for each data element.
 
-![1728321557019](image/DAK-Authoring-Guide/1728321557019.png)
+[Visual demonstration for adding a concept in OCL](input\pagecontent\image\DAK-Authoring-Guide\1728321557019.png)
+
 
 Click the "Create" button to submit the concept to OCL. OCL may return errors if improper values are provided.
 
-A visual example of populating the attributes for an OCL concept is shown below, using an example from the DAK Dictionary Template (**link to be added**):
+Here is a [visual example of populating the attributes for an OCL concept](input\pagecontent\image\DAK-Authoring-Guide\1728321566276.png), using an example from the DAK Dictionary Template (**link to be added**).
 
-![1728321566276](image/DAK-Authoring-Guide/1728321566276.png)
 
 See the Dictionary Checklist section for the required and optional attributes for concepts.
 
@@ -123,13 +121,9 @@ See below for visual examples of adding mappings to a concept.
 
 **Check this:** This process should be used not only to map concept to reference vocabs, but also back to the Core DAK dictionary that will contain common concepts. If you cloned a Core DAK concept, however, then this step has likely already been done by OCL for you.
 
-Adding a mapping to a concept that OCL recognizes:
+[Visual demonstration for adding a mapping to a concept that OCL recognizes](input\pagecontent\image\DAK-Authoring-Guide\1728321576277.png)
 
-![1728321576277](image/DAK-Authoring-Guide/1728321576277.png)
-
-Adding a mapping to a concept that OCL does not recognize:
-
-![1728321585259](image/DAK-Authoring-Guide/1728321585259.png)
+[Visual demonstration for adding a mapping to a concept that OCL does not recognize](input\pagecontent\image\DAK-Authoring-Guide\1728321585259.png)
 
 #### Creating input options for a coded data element
 
@@ -139,7 +133,7 @@ Once all required input options for a coded data element have been created in th
 
 **TBD**: Which map type to use? (If mappings are used in this way at all?)
 
-![1728321593579](image/DAK-Authoring-Guide/1728321593579.png)
+[Visual demonstration for adding a code as an input option to a data element](input\pagecontent\image\DAK-Authoring-Guide\1728321593579.png)
 
 ### Working with Value Sets
 
@@ -153,7 +147,7 @@ Note: OCL collections are the repository type which contain other concepts, also
 3. Navigate to the newly added concepts in the value set to ensure that the appropriate concepts (and their mappings) were added into the value set correctly
 4. **TBD:** Recommended - link the value set back to the data element concept using the "Value Set URL" (and "Value Set Canonical") attribute(s) (URL = OCL-specific URL, Canonical = Universal identifying URL)
 
-![1728321602745](image/DAK-Authoring-Guide/1728321602745.png)
+[Visual demonstration for creating a value set (also known as a Collection) in OCL](input\pagecontent\image\DAK-Authoring-Guide\1728321602745.png)
 
 #### Adapting an existing value set
 
@@ -167,9 +161,9 @@ All references, including those that brought content into the value set (i.e. In
 
 Note that there are known issues with this workflow, so it is important to check the value set contents. If this method fails, follow the instructions in the "Extensional value set adaptation" section.
 
-See the visual example below, where a new Danger Signs value set is created intensionally from the previous Danger Signs value set. Then, a concept is removed using an "Exclusion" reference.
+In the next visual example, a new Danger Signs value set is created intensionally from the previous Danger Signs value set. Then, a concept is removed using an "Exclusion" reference.
 
-![1728321611787](image/DAK-Authoring-Guide/1728321611787.png)
+[Visual example for intensional value set creation and code exclusion](input\pagecontent\image\DAK-Authoring-Guide\1728321611787.png)
 
 ##### Extensional value set adaptation
 
@@ -187,7 +181,7 @@ Note that any version can be released or unreleased. This is a simple flag to le
 
 **TBD**: Versioning guidance? What version numbers should be used?
 
-![1728321620169](image/DAK-Authoring-Guide/1728321620169.png)
+[Visual demonstration for creating a version of a repository within OCL](input\pagecontent\image\DAK-Authoring-Guide\1728321620169.png)
 
 ### Importing an existing DAK spreadsheet
 
