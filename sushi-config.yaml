@@ -24,7 +24,7 @@ meta:
 pages:
   index.md:
     title: Home
-  DAK-Authoring-Guide.md: DAK Data Dictionary Authoring
+  DAK-DD-Authoring-Guide.md: DAK Data Dictionary Authoring
   Terminology Personas.md: Terminology Personas
   changes.md:
     title: Changes
@@ -36,7 +36,7 @@ pages:
 menu:
   Home: index.html 
   DAK Data Dictionary Authoring:  
-    Overview: DAK-Authoring-Guide.html # Might try removing hyphens
+    Overview: DAK-DD-Authoring-Guide.html # Might try removing hyphens
     Personas: Terminology Personas.html # Might try removing spaces
   Downloads: downloads.html
   Indices:
