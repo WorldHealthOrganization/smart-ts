@@ -1,19 +1,19 @@
-# Conceptual Model for SMART Guidelines Terminology Management using OCL
+### Conceptual Model for SMART Guidelines Terminology Management using OCL
 
 For high level information about what approach will be taken for terminology management for SMART Guidelines, see slides 1-14 of this deck: https://docs.google.com/presentation/d/1MsF8Nk7w146xrMAAhs8vA5j58a9jIBoHyOCvY_AD8Bw/edit
 
-# To do
+### To do
 
 * SMART Guidelines Author --> Terminology Author? (Might need to separate L2/L3 Authoring too? Or maybe not.)
-* Troubleshoot IG: change header 1's to header 3
+* 
 
-# Setup and Prerequisites
+### Setup and Prerequisites
 
 1. An official OCL Organization should be created as the home for all WHO DAK content. In this example, it will be [WHO-SG-Example](https://app.staging.openconceptlab.org/#/orgs/WHO-SG-Example/sources/).
 2. Developers of the DAK dictionary will have an OCL account in the appropriate OCL instance, and they have been added to the WHO organization as a member.
 3. 
 
-# Start up the DAK dictionary
+### Start up the DAK dictionary
 
 ![1728321522884](image/DAK-Authoring-Guide/1728321522884.png)
 
@@ -34,13 +34,13 @@ For high level information about what approach will be taken for terminology man
 2. It is recommended that preliminary descriptive information about the DAK is provided in the Source About page, if available. This is the place to describe in detail the intended use of the DAK, assumptions, and other important information about its contents. It is also an ideal place to link to the other artifacts, GitHub reposotories, etc. that are related to your DAK. This content can be added at any time but should be populated before releasing a version of the DAK in order to appear in your FHIR terminology resource(s).
 3. Click "Create Source" to submit information and create the DAK source. Once the page refreshes, ensure that the Canonical URL of the source is visible and correct. Click on the Source to enter it and to view its contents.
 
-# Creating Concepts in the DAK
+### Creating Concepts in the DAK
 
 Whether the data dictionary element represents a question, an answer, or something else, they all will be defined as concepts within the DAK source. We can give them different attributes to differentiate, and we can also add or manage mappings on concepts. These concepts can later be organized, enriched, or otherwise altered in the future, but we will focus on the initial creation of the concepts first.
 
 Note that concepts should ideally be reused where possible, rather than created from scratch.
 
-## Searching for and reusing concepts
+#### Searching for and reusing concepts
 
 Use the search bar at the top of the page to input keywords or other search terms that could help to find an existing concept that meets the need of the DAK dictionary that is being developed.
 
@@ -48,17 +48,17 @@ Using the search results provided, look for a concept that is similar to the req
 
 In general, it is better to reuse a concept as long as the intended meaning of the concept matches the requirement. Consult the DAK management group for questions of similarity and appropriateness of reuse.
 
-### $clone
+##### $clone
 
 OCL's cloning operation can recreate a concept and its mappings, making it easier to reuse (and possibly adapt) in the current DAK dictionary. When selecting one or more concepts in OCL, use the Clone to Source button to bring up a prompt that will enable you to preview and customize this operation to make copies of a concepts for your own dictionary.
 
 Note that the clone operation by default will "cascade", meaning it will recreate both the concept and its mappings if those mappings are of a certain type. This operation can be customized to change how this cascade works.
 
-### Visual example of searching and cloning
+##### Visual example of searching and cloning
 
 ![1728321535808](image/DAK-Authoring-Guide/1728321535808.png)
 
-### Making adaptations to a cloned concept
+##### Making adaptations to a cloned concept
 
 Various adaptations can be made to concepts:
 
@@ -74,7 +74,7 @@ Note that IDs cannot be changed on any concept.
 
 ![1728321545824](image/DAK-Authoring-Guide/1728321545824.png)
 
-### Questions and Discussions
+##### Questions and Discussions
 
 * What is the order of preference of sources to search for concept reuse? Proposed order:
   * DAK Common Dictionary: Any concept can be reused verbatim or adapted (Note that any concepts from other DAK dictionaries should have a representation here, so no other DAK dictionaries should be required for searching unless they are in a pre-publication stage)
@@ -92,7 +92,7 @@ Note that IDs cannot be changed on any concept.
   * **Auto-id numbering is a good starter**
 * Note: mappings to be confirmed by a terminologist before formal publication of L2/L3 artifacts e.g. correct map type, appropriate linkage, etc.
 
-## Creating a Concept (e.g. a Data Element)
+#### Creating a Concept (e.g. a Data Element)
 
 Click the "+" icon to "Add Concept". This will open the form to create a concept, which will contain the necessary fields to fill out for each data element.
 
@@ -106,7 +106,7 @@ A visual example of populating the attributes for an OCL concept is shown below,
 
 See the Dictionary Checklist section for the required and optional attributes for concepts.
 
-## Adding Mappings to a Concept
+#### Adding Mappings to a Concept
 
 Any concept can have mappings, including the following:
 
@@ -131,7 +131,7 @@ Adding a mapping to a concept that OCL does not recognize:
 
 ![1728321585259](image/DAK-Authoring-Guide/1728321585259.png)
 
-## Creating input options for a coded data element
+#### Creating input options for a coded data element
 
 In the case that a new input option is needed for a coded data element (e.g. a new possible answer to a question concept), you first must create the concept in the DAK source, following the directions above. Searching for and reusing existing concepts is still preferable, but creating a new concept to serve as an input option will likely be needed at some point in the DAK development process.
 
@@ -141,9 +141,9 @@ Once all required input options for a coded data element have been created in th
 
 ![1728321593579](image/DAK-Authoring-Guide/1728321593579.png)
 
-# Working with Value Sets
+### Working with Value Sets
 
-## Creating a value set from a data element's input options
+#### Creating a value set from a data element's input options
 
 Note: OCL collections are the repository type which contain other concepts, also known as a value set in FHIR terms.
 
@@ -155,9 +155,9 @@ Note: OCL collections are the repository type which contain other concepts, also
 
 ![1728321602745](image/DAK-Authoring-Guide/1728321602745.png)
 
-## Adapting an existing value set
+#### Adapting an existing value set
 
-### Intensional value set adaptation
+##### Intensional value set adaptation
 
 When an existing value set meets most of the requirements, but has slightly different values in the set for the DAK in development, the existing value set can be adapted using intensional references. Simply put, this allows the DAK developer to bring in another value set's contents using one command, rather than selecting concepts one at a time. Once that new value set has been started, new concepts can be added using the instructions in the "Creating a value set from a data element's input options" section. Concepts can also be removed from the value set by selecting the concepts and clicking "Remove references".
 
@@ -171,11 +171,11 @@ See the visual example below, where a new Danger Signs value set is created inte
 
 ![1728321611787](image/DAK-Authoring-Guide/1728321611787.png)
 
-### Extensional value set adaptation
+##### Extensional value set adaptation
 
 When intensional value set building is not appropriate or working as expected, then it is appropriate to create new value sets using the similar method described in the "Creating a value set from a data element's input options" section. Concepts in the existing value set can be selected, one at a time, and added into the new, adapted value set. From that new value set, new concepts can be added or removed by selecting the concepts and clicking "Remove references" as described in the "Intensional value set adaptation" section.
 
-# Managing versions
+### Managing versions
 
 Save versions of all created repositories at the end of the development process when ready to share content for broader feedback. This can be done within the Version tab of all sources and collections (i.e. CodeSystems and ValueSets). Creating a version means that OCL will save your current progress in that repository.
 
@@ -189,7 +189,7 @@ Note that any version can be released or unreleased. This is a simple flag to le
 
 ![1728321620169](image/DAK-Authoring-Guide/1728321620169.png)
 
-# Importing an existing DAK spreadsheet
+### Importing an existing DAK spreadsheet
 
 Python scripts or other tools to prepare the DAK dictionary for import into OCL may be also used to create terminology resources in OCL. However, this likely will not fully follow the DAK model in OCL and will still require additional enrichment, mappings to DAK concepts, etc. in OCL.
 
@@ -203,15 +203,15 @@ Existing (albeit nascent and not fully tested and validated) tooling for this sp
   * Converts DAK spreadsheet concepts into OCL bulk import files that create a single source, then organizes concepts into value sets, then creates versions of those value sets
 * I-TECH L3 tooling (not yet endorsed, further documentation needed): https://github.com/I-TECH-UW/who_l3_smart_tools/
 
-# Using OCL terminology resources for FHIR IG generation
+### Using OCL terminology resources for FHIR IG generation
 
 As of August 2024, OCL is not currently established as a terminology server for the FHIR Implementation Guide (IG) publisher. This means that the IG Publisher cannot directly query OCL's FHIR terminology resources during the IG  However, OCL's terminology resources can be used in combination with the IG Publisher (including FSH/SUSHI files if needed) to generate a FHIR implementation guide.
 
-## Retrieving FHIR resources from OCL
+#### Retrieving FHIR resources from OCL
 
 One of two main methods can be used to get FHIR terminology resources out of OCL. Regardless of which option is used, OCL's FHIR resources (CodeSystems, ValueSets, and ConceptMaps) need to be saved individually, not as FHIR bundles.
 
-### Method 1: Get as FHIR bundle and extract out individual FHIR resources
+##### Method 1: Get as FHIR bundle and extract out individual FHIR resources
 
 OCL's API returns a bundle of resources when hitting appropriate endpoints for CodeSystem, ValueSet, and ConceptMap. In general, this should occur in the organization namespace in which the DAK dictionary was authored. Additionally, parameters can be specified to filter out the resources that are returned in the bundle.
 
@@ -231,7 +231,7 @@ Using this query structure, you can retrieve all of the appropriate terminology 
 
 Once the resources have been retrieved, tooling like this [Python script](https://github.com/jamlung-ri/WHO-SMART-Guidelines/blob/main/FHIR%20Bundle%20Parser/FHIR%20Bundle%20Parser.py) can be used to parse out the individual FHIR resources from the bundle. These resources should now be in their own individual JSON files, which can be used in subsequent steps.
 
-### Method 2: Download and save FHIR resources individually
+##### Method 2: Download and save FHIR resources individually
 
 OCL's API can also return an individual FHIR terminology resource as its own JSON file, which can be saved off one-at-a-time.
 
@@ -247,7 +247,7 @@ JSON files can be saved from your browser, Postman, Python, Google Sheets, or va
 
 Once all the resources have been saved, they should be in their own individual JSON files, which can be used in subsequent steps.
 
-## Preparing terminology resources for the IG Publisher
+#### Preparing terminology resources for the IG Publisher
 
 Place the FHIR resources into the GitHub repository that contains the other IG files, specifically in the subfolder "input/resources/"
 
@@ -267,15 +267,15 @@ Parent: SGImmunization
 * In this example, the canonical URL "http://smart.who.int/immunizations-measles/ValueSet/VSMeaslesVaccineProducts" references [this OCL valueset](https://app.staging.openconceptlab.org/#/orgs/WHO-SMART-Measles-Test/collections/VSMeaslesVaccineProducts/).
   * Note: OCL enables searching by a canonical URL if you would like to verify the presence of a terminology resource in OCL. [Example search](https://app.staging.openconceptlab.org/#/search/?q=http://smart.who.int/immunizations-measles/ValueSet/VSMeaslesVaccineProducts&isTable=true&isList=false&page=1&type=collections) in the OCL Staging environment.
 
-# Dictionary Checklist
+### Dictionary Checklist
 
 The following tables display the required and optional attributes to be present when developing terminology artifacts for DAK dictionaries. Some of these attributes are required to create something within OCL, but all attributes in the Required section will be needed to publish the completed DAK to the SMART Guidelines community.
 
-## DAK Dictionary (Source)
+#### DAK Dictionary (Source)
 
 Many of the attributes specified in the DAK source will appear in the **FHIR CodeSystem resource(s)** once the DAK dictionary has been authored and getting ready for L3 publication.
 
-### Required
+##### Required
 
 | OCL Source Field                                     | FHIR or DAK Attribute                                                                                                                                                                                                                                                 | Expected or Example Value                                                          | Notes                                                                                                                                                 |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -294,7 +294,7 @@ Many of the attributes specified in the DAK source will appear in the **FHIR Cod
 | (ID Autoassignment) Concept Description External IDs | N/A                                                                                                                                                                                                                                                                   | UUID (Expected)                                                                     | Automatically assigns unique UUIDs to concept descriptions, which is required for implementation in OpenMRS instances                                 |
 | Purpose                                              | [purpose](http://hl7.org/fhir/R4/codesystem-definitions.html#CodeSystem.purpose "CodeSystem.purpose : Explanation of why this code system is needed and why it has been designed as it has.")                                                                               | "ANC" (Example)`<ig_code>`                                                        | This field will be used to query within a DAK domain e.g. "HIV". See FHIR spec for other intended uses.                                               |
 
-### Optional but recommended
+##### Optional but recommended
 
 | OCL Source Field                        | FHIR or DAK Attribute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Expected or Example Value                                      | Notes                                                                                                                              |
 | --------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -317,16 +317,16 @@ Many of the attributes specified in the DAK source will appear in the **FHIR Cod
 | Version Needed                          | [versionNeeded](http://hl7.org/fhir/R4/codesystem-definitions.html#CodeSystem.versionNeeded "CodeSystem.versionNeeded : This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.")                                                                                                                                                                                                                                 |                                                                 | See FHIR spec for intended use                                                                                                     |
 | About Text                              | [text](http://hl7.org/fhir/R4/domainresource-definitions.html#DomainResource.text "DomainResource.text : A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.") |                                                                 | See FHIR spec for intended use                                                                                                     |
 
-### Questions and Discussions
+##### Questions and Discussions
 
 * Are any of these Optional attributes actually required? What requirements or guidance are there? Or is it open ended for now?
 * Please populate "TBD" values
 
-## Concept Attributes
+#### Concept Attributes
 
 Many of the attributes specified in these concepts represent columns from the L2 data dictionary spreadsheet.
 
-### Required
+##### Required
 
 When creating concepts (data elements or input options), the following OCL fields should be populated (using these values from the DAK data dictionary if available):
 
@@ -346,12 +346,12 @@ When creating concepts (data elements or input options), the following OCL field
 | (Descriptions) External ID    | N/A                                                             | N/A                                                                             | If the OCL source is configured properly, then OCL will automatically assign this value.                                                    |
 | (Descriptions) Preferred       | N/A                                                             | ✓                                                                              | Designates that the description is preferred within this locale                                                                             |
 
-### Conditionally required
+##### Conditionally required
 
 * Explain conditionality - Required based on Optionality value?
 * 
 
-### Optional (but recommended)
+##### Optional (but recommended)
 
 Additionally, the following attributes from the DAK can be defined as Custom (AKA Extra) Attributes in OCL if applicable:
 
@@ -369,7 +369,7 @@ Additionally, the following attributes from the DAK can be defined as Custom (AK
 | Annotations                                        | Annotations                          | This field can also be calculated as defined by member states                                              |
 | Intended FHIR Resource for profile (if available) | HL7_FHIR_R4_Resource                 | TBD                                                                                                        |
 
-### Questions and Discussions
+##### Questions and Discussions
 
 * Data type: Need to figure out how DAK values map to OCL values
 * Concept Class - currently using this as "Data Element" vs. "Input Option". How does WHO actually want to use this? Example - CIEL uses diagnoses, tests, question/answers, concept sets, etc.
@@ -379,13 +379,13 @@ Additionally, the following attributes from the DAK can be defined as Custom (AK
 * Are any of these Extra Attributes required? What requirements or guidance are there? Or is it open ended for now?
 * Please populate "TBD" values in Dictionary Checklist section
 
-## Value Sets (Collections)
+#### Value Sets (Collections)
 
 Be sure to include "Purpose" attribute as the main DAK attribute?
 
 Many of the attributes specified in the DAK collections in OCL will appear in the **FHIR ValueSet resource(s)** once the DAK dictionary has been authored and getting ready for L3 publication.
 
-### Required
+##### Required
 
 | OCL Source Field                                     | FHIR or DAK Attribute                                                                                                                                                                                                                                                 | Expected or Example Value                                      | Notes                                                                                                                                                 |
 | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -405,7 +405,7 @@ Many of the attributes specified in the DAK collections in OCL will appear in th
 | Purpose                                              | [purpose](http://hl7.org/fhir/R4/codesystem-definitions.html#CodeSystem.purpose "CodeSystem.purpose : Explanation of why this code system is needed and why it has been designed as it has.")                                                                               | "ANC" (Example)                                                 | This field will be used to query within a DAK domain e.g. "HIV". See FHIR spec for other intended uses.                                               |
 |                                                      |                                                                                                                                                                                                                                                                       |                                                                 |                                                                                                                                                       |
 
-### Optional
+##### Optional
 
 | OCL Source Field          | FHIR or DAK Attribute                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Expected or Example Value                                      | Notes                                                                                                                              |
 | ------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -428,12 +428,12 @@ Many of the attributes specified in the DAK collections in OCL will appear in th
 | Version Needed            | [versionNeeded](http://hl7.org/fhir/R4/codesystem-definitions.html#CodeSystem.versionNeeded "CodeSystem.versionNeeded : This flag is used to signify that the code system does not commit to concept permanence across versions. If true, a version must be specified when referencing this code system.")                                                                                                                                                                                                                                 |                                                                 | See FHIR spec for intended use                                                                                                     |
 | About Text                | [text](http://hl7.org/fhir/R4/domainresource-definitions.html#DomainResource.text "DomainResource.text : A human-readable narrative that contains a summary of the resource and can be used to represent the content of the resource to a human. The narrative need not encode all the structured data, but is required to contain sufficient detail to make it &quot;clinically safe&quot; for a human to just read the narrative. Resource definitions may define what content should be represented in the narrative to ensure clinical safety.") |                                                                 | See FHIR spec for intended use                                                                                                     |
 
-### Questions and Discussions
+##### Questions and Discussions
 
 * Are any of these Optional attributes actually required? What requirements or guidance are there? Or is it open ended for now?
 * Please populate "TBD" values
 
-# Major TBDs, Gaps, and/or Assumptions
+### Major TBDs, Gaps, and/or Assumptions
 
 * **Concept Properties:** In the absense of CodeSystem property support, all concept properties outside of OCL's data model will be stored as Extra attributes, including but not limited to the following properties: "Activity ID and name", "Quantity subtype", "Calculation", "Validation condition", "Optionality", "Explain conditionality", "Functional grouping of data elements", "Linkages to decision-support tables", "Linkages to scheduling logic tables", "Linkages to aggregate indicators", "Annotations", "Intended FHIR Resource for profile" (if available)
 * **Map Types:** What are the preferred map types for the following scenarios? (Common OCL map types that work with OpenMRS include SAME-AS, Narrower-Than, Broader-Than, Q-AND-A, Concept-Set)
@@ -443,7 +443,7 @@ Many of the attributes specified in the DAK collections in OCL will appear in th
   * Mapping a concept as inexactly mapped to another concept (e.g. narrower-than or broader-than)
   * Discussion outcome 16Sep2024: Jon and Joe to brainstorm a model for better displaying collection members instead of Associations
 
-## Completed Discussions
+#### Completed Discussions
 
 * **Packaging:** In the absence of packaging features for specific DAKs, there may need to be a way to group or retrieve OCL content that denotes what DAK(s) it should be packaged with. Example: Use the Purpose FHIR attribute of the CodeSystem, ValueSet, and ConceptMap resources
 
