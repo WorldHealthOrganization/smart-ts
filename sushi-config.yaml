@@ -25,7 +25,7 @@ pages:
   index.md:
     title: Home
   DAK-DD-Authoring-Guide.md: DAK Data Dictionary Authoring
-  Terminology Personas.md: Terminology Personas
+  TerminologyPersonas.md: Terminology Personas
   changes.md:
     title: Changes
   downloads.md: 
@@ -37,7 +37,7 @@ menu:
   Home: index.html 
   DAK Data Dictionary Authoring:  
     Overview: DAK-DD-Authoring-Guide.html # Might try removing hyphens
-    Personas: Terminology Personas.html # Might try removing spaces
+    Personas: TerminologyPersonas.html # Might try removing spaces
   Downloads: downloads.html
   Indices:
     Artifact Index: artifacts.html
