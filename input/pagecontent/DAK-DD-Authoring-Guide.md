@@ -1,4 +1,4 @@
-### Conceptual Model for SMART Guidelines Terminology Management using OCL
+### WHO DAK communityWHO personnelConceptual Model for SMART Guidelines Terminology Management using OCL
 
 For high level information about what approach will be taken for terminology management for SMART Guidelines, see [slides 1-16 of this deck](https://docs.google.com/presentation/d/1MsF8Nk7w146xrMAAhs8vA5j58a9jIBoHyOCvY_AD8Bw/edit)
 
@@ -36,7 +36,7 @@ If multiple concepts appear in search results that meet the requirement, authors
 1. (If published) SMART Common Dictionary: Any concept can be reused verbatim or adapted (Note that any concepts from other DAK dictionaries should have a representation here, so no other DAK dictionaries should be required for searching unless they are in a pre-publication stage)
 2. Other published DAKs
 
-In general, it is better to reuse a concept as long as the intended meaning of the concept matches the requirement. Consult the DAK management group for questions of similarity and appropriateness of reuse.
+In general, it is better to reuse a concept as long as the intended meaning of the concept matches the requirement. Consult the relevant DAK authority for questions of similarity and appropriateness of reuse.
 
 ##### $clone
 
@@ -89,7 +89,7 @@ Then you can input the code or name of the concept to map to. If OCL does not re
 
 See below for visual examples of adding mappings to a concept.
 
-This process should be used not only to map concept to reference vocabs, but also back to the Core DAK dictionary that will contain common concepts. If you cloned a Core DAK concept, however, then this step has likely already been done by OCL for you.
+This process should be used not only to map concept to reference vocabs, but also back to the SMART Common Dictionary that will contain common concepts. If you cloned a concept from the SMART Common Dictionary, however, then this step has likely already been done by OCL for you.
 
 [Visual demonstration for adding a mapping to a concept that OCL recognizes](/input/images/1728302589232.png)
 
@@ -101,7 +101,7 @@ In the case that a new input option is needed for a coded data element (e.g. a n
 
 Once all required input options for a coded data element have been created in the DAK source, open the details for the data element and navigate to the Associations section. Use the "Add new mapping" option or the Three-dot menu of another mapping to open a form that will help you to create the new association between data element and input option(s).
 
-Map type options to be used in DAKs will be found in a WHO-managed repository in OCL. Consult with the appropriate WHO personnel for details.
+Map type options to be used in DAKs will be found in a WHO-managed repository in OCL. Consult with the appropriate DAK authority for details.
 
 [Visual demonstration for adding a code as an input option to a data element](/input/images/1728302617005.png)
 
@@ -292,7 +292,7 @@ When creating concepts (data elements or input options), the following OCL field
 | OCL Concept Field              | DAK Data Dictionary Attribute   | Example Value                                                                  | Notes                                                                                                                                       |
 | ------------------------------ | -------------------------------- | ------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | Concept ID                     | Data element ID                  | ANC.B5.DE48                                                                     | This ID value is permanent and cannot later be changed on a concept.                                                                        |
-| Concept Class                  | "Data Element" or "Input Option" | Misc                                                                            | Other values may be permitted by WHO DAK community.                                                                                         |
+| Concept Class                  | "Data Element" or "Input Option" | Misc                                                                            | Other values may be permitted by DAK authority.                                                                                             |
 | Datatype                       | Data type                        | string                                                                          | Use WHO's Data Types value set for this, which can be found on OCL                                                                          |
 | (Names & Synonyms) Locale      | N/A                              | en                                                                              | Use whatever locale (i.e. language code) is applicable to the name                                                                          |
 | (Names & Synonyms) Name       | Data element label               | ANC danger signs                                                                | Multiple names and synonyms can be added, each with their own Locale and Type                                                               |
