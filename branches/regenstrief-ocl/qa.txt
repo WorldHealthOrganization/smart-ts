@@ -1,0 +1,45 @@
+Ts : Validation Results
+=========================================
+
+err = 3, warn = 9, info = 0
+IG Publisher Version: 1.7.5
+Generated Mon Dec 09 18:25:28 UTC 2024. FHIR version 4.0.1 for smart.who.int.ts#0.1.0 (canonical = http://smart.who.int/ts)
+ Build Errors : 20 / 4 / 0
+ /github/workspace/fsh-generated/resources/CodeSystem-ICD11 : 2 / 5 / 4
+ /github/workspace/fsh-generated/resources/ImplementationGuide-smart.who.int.ts : 1 / 0 / 2
+</table>
+== n/a ==
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 214, column 5: The link '/input/images/1728302475032.png' for "Visual demonstration for creating a DAK Data Dictionary as an OCL Source" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 257, column 5: The link '/input/images/1728302521693.png' for "Visual example of searching and cloning" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 275, column 5: The link '/input/images/1728302543511.png' for "Visual example in OCL for editing a concept" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 281, column 5: The link '/input/images/1728302561394.png' for "Visual demonstration for adding a concept in OCL" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 285, column 15: The link '/input/images/1728302571960.png' for "visual example of populating the attributes for an OCL concept" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 308, column 5: The link '/input/images/1728302589232.png' for "Visual demonstration for adding a mapping to a concept that OCL recognizes" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 310, column 5: The link '/input/images/1728302601944.png' for "Visual demonstration for adding a mapping to a concept that OCL does not recognize" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 320, column 5: The link '/input/images/1728302617005.png' for "Visual demonstration for adding a code as an input option to a data element" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 339, column 5: The link '/input/images/1728302632280.png' for "Visual demonstration for creating a value set (also known as a Collection) in OCL" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 355, column 5: The link '/input/images/1728302658041.png' for "Visual example for intensional value set creation and code exclusion" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/p/a at Line 373, column 5: The link '/input/images/1728302669099.png' for "Visual demonstration for creating a version of a repository within OCL" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 496, column 12: The link 'http://hl7.org/fhir/R4B/codesystem-definitions.html#CodeSystem.name' for "name" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 502, column 12: The link 'http://hl7.org/fhir/R4B/codesystem-definitions.html#CodeSystem.title' for "title" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 894, column 12: The link 'http://hl7.org/fhir/R4B/codesystem-definitions.html#CodeSystem.name' for "name" cannot be resolved
+ERROR: /github/workspace/output/DAK-DD-Authoring-Guide.html#/html/body/div/div/div/div/div/table/tbody/tr/td/a at Line 900, column 12: The link 'http://hl7.org/fhir/R4B/codesystem-definitions.html#CodeSystem.title' for "title" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/p/a at Line 331, column 88: The link 'references.html' for "References" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/p/a at Line 331, column 133: The link 'dependencies.html' for "Dependencies" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 338, column 8: The link 'business-requirements.html' for "Business Requirements" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 339, column 8: The link 'data-models-and-exchange.html' for "Data Models and Exchange" cannot be resolved
+ERROR: /github/workspace/output/index.html#/html/body/div/div/div/div/div/ul/li/a at Line 340, column 8: The link 'deployment.html' for "Deployment Guidance" cannot be resolved
+WARNING: 1: The HTML fragment 'ip-statements.xhtml' is not included anywhere in the produced implementation guide
+WARNING: 2: An HTML fragment from the set [cross-version-analysis.xhtml, cross-version-analysis-inline.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 3: An HTML fragment from the set [dependency-table.xhtml, dependency-table-short.xhtml] is not included anywhere in the produced implementation guide
+WARNING: 4: The HTML fragment 'globals-table.xhtml' is not included anywhere in the produced implementation guide
+== fsh-generated/resources/CodeSystem-ICD11.json ==
+ERROR: CodeSystem.where(url = 'http://id.who.int/icd/release/11/mms'): Conformance resource /github/workspace/fsh-generated/resources/CodeSystem-ICD11.json - the canonical URL (http://smart.who.int/ts/CodeSystem/ICD11) does not match the URL (http://id.who.int/icd/release/11/mms)
+WARNING: CodeSystem/ICD11: CodeSystem.concept[81].definition: value should not start or finish with whitespace ' Pertussis vaccines'
+WARNING: CodeSystem/ICD11: CodeSystem.concept[119].definition: value should not start or finish with whitespace 'Typhoid-paratyphoid vaccines \u00a0 '
+WARNING: CodeSystem/ICD11: CodeSystem.concept[121].display: value should not start or finish with whitespace 'Varicella, live attenuated '
+WARNING: CodeSystem/ICD11: CodeSystem.concept[121].definition: value should not start or finish with whitespace 'Varicella, live attenuated \u00a0 '
+WARNING: CodeSystem/ICD11: CodeSystem.concept[134].definition: value should not start or finish with whitespace 'COVID-19 vaccine, live attenuated virus '
+ERROR: /github/workspace/fsh-generated/resources/CodeSystem-ICD11: URL Mismatch http://smart.who.int/ts/CodeSystem/ICD11 vs http://id.who.int/icd/release/11/mms
+== fsh-generated/resources/ImplementationGuide-smart.who.int.ts.json ==
+ERROR: ImplementationGuide/smart.who.int.ts: ImplementationGuide: ImplementationGuide.experimental: minimum required = 1, but only found 0 (from http://smart.who.int/base/StructureDefinition/SGImplementationGuide|0.1.0)
